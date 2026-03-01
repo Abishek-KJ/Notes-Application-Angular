@@ -1,0 +1,20 @@
+<div class="note-list-container">
+  <h2>My Notes</h2>
+  
+  <!-- *ngIf: Show message when no notes -->
+  <div *ngIf="notes.length === 0" class="no-notes">
+    <p>No notes yet! Click "Add Note" to create your first note.</p>
+  </div>
+
+  <!-- *ngFor: Display notes in a list -->
+  <div class="notes-grid">
+    <div 
+      *ngFor="let note of notes; let i = index" 
+      class="note-card"
+      [ngClass]="{'important': note.length > 50}"
+      appHighlight>
+      <p class="note-content">{{ note }}</p>
+      <button (click)="deleteNote(i)" class="delete-btn">Delete</button>
+    </div>
+  </div>
+</div>

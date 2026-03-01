@@ -1,0 +1,12 @@
+<div class="add-note-container">
+  <h2>Add New Note</h2>
+  <div class="form-group">
+    <textarea 
+      [(ngModel)]="noteContent" 
+      placeholder="Enter your note here..."
+      rows="5"
+      cols="40">
+    </textarea>
+  </div>
+  <button (click)="addNote()" [disabled]="!noteContent.trim()">Add Note</button>
+</div>

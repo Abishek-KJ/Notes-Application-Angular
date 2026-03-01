@@ -1,0 +1,13 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-brand">{{ title }}</div>
+  <ul class="nav-menu">
+    <li><a routerLink="/dashboard/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/dashboard/profile" routerLinkActive="active">Profile</a></li>
+    <li><a routerLink="/notes/add-note" routerLinkActive="active">Add Note</a></li>
+<li><a routerLink="/notes/list" routerLinkActive="active">Notes</a></li>
+  </ul>
+</nav>
+
+<!-- Router Outlet for displaying components -->
+<router-outlet></router-outlet>
